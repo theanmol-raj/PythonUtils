@@ -129,7 +129,7 @@ def pred_and_plot(model, filename, class_names):
   # Plot the image and predicted class
   plt.imshow(img)
   plt.title(f"Prediction: {pred_class}") 
-  plt.axis(False);
+  plt.axis(False)
   
 import datetime
 
