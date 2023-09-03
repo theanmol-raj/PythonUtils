@@ -15,11 +15,13 @@ def fullPreprocessing(image : any  ,label : str ,scale : bool = True ,image_shap
     > Cast to 'float32' : function castFloat(image)
     """
     image = resizeImage(image , image_shape)
+    print('pass 1')
     if(image.dtype != tf.float32) :
         image = castFloat(image)
+    print('pass 2')
     if(scale) :
         image = scaleImage(image)
-
+    print('pass 3')
     return image ,label
 
 
