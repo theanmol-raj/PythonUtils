@@ -1,4 +1,4 @@
-# This script has all the image preprocessing functions for gthe tensorflow v 2.12.0+
+# This script has all the image preprocessing functions for the tensorflow v 2.12.0+
 # Made by Anmol Raj 
 # Github : https://github.com/theanmol-raj
 # LinkedIn : https://www.linkedin.com/in/anmolraj5/
