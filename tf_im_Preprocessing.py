@@ -6,7 +6,7 @@
 
 import tensorflow as tf
 
-def fullPreprocessing(image : any  ,label : str ,resize : bool  = True ,scale : bool = True ,image_shape : float | int = 224 ):
+def fullPreprocessing(image : any  ,label : str ,scale : bool = True ,image_shape : float | int = 224 ):
     """
     This function does complete preprocessing from the flow 
     Current Flow :
@@ -14,8 +14,7 @@ def fullPreprocessing(image : any  ,label : str ,resize : bool  = True ,scale : 
     > Scaling : function scaleImage(image)
     > Cast to 'float32' : function castFloat(image)
     """
-    if(resize):
-        image = resizeImage(image , image_shape)
+    image = resizeImage(image , image_shape)
     if(image.dtype != tf.float32) :
         image = castFloat(image)
     if(scale) :
