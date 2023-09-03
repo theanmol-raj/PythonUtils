@@ -18,10 +18,8 @@ def fullPreprocessing(image : any  ,label : str ,resize : bool  = False ,scale :
         image = resizeImage(image , image_shape)
     if(scale) :
         image = scaleImage(image)
-    if(image.dtype != tf.float32) :
-        image = castFloat(image)
-    else:
-        print('Pass')
+    image = castFloat(image)
+
     return image ,label
 
 
