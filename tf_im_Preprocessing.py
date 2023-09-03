@@ -6,7 +6,7 @@
 
 import tensorflow as tf
 
-def fullPreprocessing(image : any  ,label : str ,resize : bool  = False ,scale : bool = True ,image_shape : float | int = 224 ):
+def fullPreprocessing(image : any  ,label : str ,resize : bool  = True ,scale : bool = True ,image_shape : float | int = 224 ):
     """
     This function does complete preprocessing from the flow 
     Current Flow :
@@ -42,7 +42,7 @@ def scaleImage(image):
     """
     Scales (Normalize) image tensor  to a value between 0 & 1 
     """
-    return image /255.
+    return image / 255.
 
 def resizeImage(image , image_shape : float | int = 224):
     """
