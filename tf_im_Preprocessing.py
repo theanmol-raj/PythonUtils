@@ -43,7 +43,7 @@ def scaleImage(image):
     """
     Scales (Normalize) image tensor  to a value between 0 & 1 
     """
-    return image / 255.
+    return tf.cast(image , tf.float32) / 255.
 
 def resizeImage(image , image_shape : float | int = 224):
     """
