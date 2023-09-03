@@ -14,10 +14,14 @@ def fullPreprocessing(image : any  ,label : str ,resize : bool  = False ,scale :
     > Scaling : function scaleImage(image)
     > Cast to 'float32' : function castFloat(image)
     """
-    if(resize):image = resizeImage(image , image_shape)
-    if(scale) :image = scaleImage(image)
-    if(image.dtype != tf.float32) :image = castFloat(image)
-    else: print('Pass')
+    if(resize):
+        image = resizeImage(image , image_shape)
+    if(scale) :
+        image = scaleImage(image)
+    if(image.dtype != tf.float32) :
+        image = castFloat(image)
+    else:
+        print('Pass')
     return image ,label
 
 
