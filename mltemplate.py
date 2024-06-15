@@ -63,7 +63,7 @@ def run(project_name ,env):
             sys.stdout.write(f"{filename} is already exists\n")
 
     sys.stdout.write("Attempting to create an environment ...\n")
-    python = input("Enter python version (default==3.11) :") or '3.11'
+    python = env
     try:
         os.system(f'conda create -p venv python=={python} -y')
         sys.stdout.write(f"Created an environment venv with python version : {python}\n")
