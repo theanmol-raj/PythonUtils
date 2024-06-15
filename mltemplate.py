@@ -11,6 +11,7 @@ delay = 0.5
 def get_args():
     parser = argparse.ArgumentParser(description="Process key-value arguments")
     parser.add_argument("--name", type=str, required=True, help="Project Name")
+    parser.add_argument("--env", type=int, required=True, help="Python version")
     return parser.parse_args()
 
 
@@ -39,7 +40,7 @@ list_of_files = [
     "src/logging.py",
     "src/exception.py", 
 ]
-def run(project_name):
+def run(project_name ,env):
     os.system('cls')
     sys.stdout.write(" This Script is built by github.com/theanmol-raj : \n")
     for filepath in list_of_files:
@@ -73,6 +74,7 @@ def run(project_name):
 if __name__ == "__main__":
     args = get_args()
     project_name = args.name
-    run(project_name=project_name)
+    
+    run(project_name=project_name ,env=args.env)
     sys.stdout.write(" This Script is built by github.com/theanmol-raj : \n")
     
