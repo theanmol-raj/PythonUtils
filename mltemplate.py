@@ -11,7 +11,7 @@ delay = 0.5
 def get_args():
     parser = argparse.ArgumentParser(description="Process key-value arguments")
     parser.add_argument("--name", type=str, required=True, help="Project Name")
-    parser.add_argument("--env", type=int, required=True, help="Python version")
+    parser.add_argument("--env", type=float, required=True, help="Python version")
     return parser.parse_args()
 
 
